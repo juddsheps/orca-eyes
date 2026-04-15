@@ -6,14 +6,22 @@ export function createProductHero() {
 
           <!-- Image Gallery -->
           <div class="space-y-4">
-            <div class="aspect-square bg-white/5 border border-white/10 flex items-center justify-center">
-              <p class="text-white/20 text-sm tracking-widest uppercase">Product Image</p>
+            <div class="aspect-square overflow-hidden bg-white/5">
+              <img id="main-image" src="/images/product-white.png" alt="Orca Eyes sticker" class="w-full h-full object-contain"/>
             </div>
             <div class="grid grid-cols-4 gap-2">
-              <div class="aspect-square bg-white/5 border border-white/10 cursor-pointer hover:border-white/40 transition-colors"></div>
-              <div class="aspect-square bg-white/5 border border-white/10 cursor-pointer hover:border-white/40 transition-colors"></div>
-              <div class="aspect-square bg-white/5 border border-white/10 cursor-pointer hover:border-white/40 transition-colors"></div>
-              <div class="aspect-square bg-white/5 border border-white/10 cursor-pointer hover:border-white/40 transition-colors"></div>
+              <div onclick="setImage('/images/product-white.png')" class="aspect-square overflow-hidden cursor-pointer border border-white/40 hover:border-white transition-colors">
+                <img src="/images/product-white.png" class="w-full h-full object-contain bg-white/5"/>
+              </div>
+              <div onclick="setImage('/images/sticker-on-board.jpg')" class="aspect-square overflow-hidden cursor-pointer border border-white/10 hover:border-white transition-colors">
+                <img src="/images/sticker-on-board.jpg" class="w-full h-full object-cover"/>
+              </div>
+              <div onclick="setImage('/images/surf-paddle-under.jpg')" class="aspect-square overflow-hidden cursor-pointer border border-white/10 hover:border-white transition-colors">
+                <img src="/images/surf-paddle-under.jpg" class="w-full h-full object-cover"/>
+              </div>
+              <div onclick="setImage('/images/surf-air.jpg')" class="aspect-square overflow-hidden cursor-pointer border border-white/10 hover:border-white transition-colors">
+                <img src="/images/surf-air.jpg" class="w-full h-full object-cover"/>
+              </div>
             </div>
           </div>
 
@@ -103,6 +111,10 @@ export function initProduct() {
     const active = document.getElementById(`pack-${num}`)
     active.classList.add('border-white', 'text-white')
     active.classList.remove('border-white/20', 'text-white/50')
+  }
+
+  window.setImage = function(src) {
+    document.getElementById('main-image').src = src
   }
 
   window.buyNow = async function() {

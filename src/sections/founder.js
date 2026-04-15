@@ -22,17 +22,9 @@ export function createFounder() {
           </div>
 
           <!-- Visual side -->
-          <div class="relative">
-            <div class="aspect-square bg-white/5 border border-white/10 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-32 h-32 rounded-full border-4 border-white/20 mx-auto mb-6 flex items-center justify-center">
-                  <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                    <div class="w-6 h-6 rounded-full bg-white/60"></div>
-                  </div>
-                </div>
-                <p class="text-white/20 text-sm tracking-widest uppercase">Photo coming soon</p>
-              </div>
-            </div>
+          <div class="relative aspect-square overflow-hidden">
+            <img src="/images/surf-reef.jpg" alt="Surfer on reef" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-black/20"></div>
           </div>
 
         </div>

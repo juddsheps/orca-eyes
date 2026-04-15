@@ -1,6 +1,13 @@
 export function createWhy() {
   return `
     <section id="why" class="bg-black py-32 px-8">
+
+      <!-- Orca background -->
+      <div class="relative mb-20 overflow-hidden">
+        <img src="/images/orcas.jpg" alt="Orcas" class="w-full h-64 md:h-96 object-cover opacity-60"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black"></div>
+      </div>
+
       <div class="max-w-5xl mx-auto">
 
         <div class="mb-20">
